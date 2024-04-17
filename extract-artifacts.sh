@@ -1,0 +1,1 @@
+find "${1:-.}" -mindepth 2 -type f -iname "*.pom" -printf "%h\n" > files; find "${1:-.}" -mindepth 2 -type f -iname "*.jar" -printf "%h\n" >> files; cat files | sort | uniq > artifacts; rm files
